@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  body {
+    background: #f4f6f8;
+    font-family: "Poppins", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  form {
+    background: #a8b6f3;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  legend {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  label {
+    display: block;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #444;
+  }
+
+  input, datalist {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 0.95em;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    outline: none;
+  }
+
+  button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  details {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+summary {
+  font-weight: 600;
+  color: #007bff;
+  outline: none;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+details p {
+  margin-top: 10px;
+  color: #444;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+  <article>
+    <header>
+      
+</script>
+    </header>
+   </article>
+
+<form>
+    <fieldset>
+        <legend>Cadastro de Doadores</legend>
+        
+        <label for="nome"><strong>Nome Completo:</strong></label>
+        <input type="text" id="nome" name="nome" required>
+              
+        <label for="telefone"><strong>Telefone:</strong></label>
+        <input type="tel" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" 
+        placeholder="(00) 00000-0000" title="Formato: (00) 00000-0000">
+
+        <datalist id="sexo">
+        <option value="Masculino">
+        <option value="Feminino">
+        <option value="Prefiro não dizer">
+        </datalist>
+
+        <label for="sexo"><strong>Sexo:</strong></label>
+        <input list="sexo" id="sexo" name="sexo">
+        <!-- aqui posso colocar opções para escolher ex: qual seu sexo -->
+        
+        <label for="nascimento"><strong>Data de Nascimento:</strong></label>
+        <input type="date" id="nascimento" name="nascimento">
+            
+        <label for="CPF"><strong>CPF:</strong></label>
+        <input type="text" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" 
+        placeholder="000.000.000-00" title="Formato: 000.000.000-00">
+        <!-- colocando essa máscara ele já mostra o formato -->
+        <p>                                                              </p>
+        <details>
+        
+        <summary>Clique para ler o Termo de Aceite para Doadores</summary>
+        <p>
+          Ao aceitar este termo, o(a) doador(a) manifesta sua vontade de contribuir voluntariamente com a ONG Amigos dos Animais, instituição sem fins lucrativos dedicada à proteção, resgate, tratamento e adoção de animais em situação de vulnerabilidade.
+        </p>
+        <p>
+          <strong>1. Doação:</strong> O(a) doador(a) declara estar ciente de que sua contribuição é voluntária, sem contrapartida financeira ou material, e será destinada exclusivamente às ações e projetos mantidos pela ONG.<br><br>
+          <strong>2. Finalidade:</strong> Os recursos doados poderão ser utilizados para: alimentação, abrigo e cuidados veterinários dos animais resgatados; campanhas de adoção, castração e conscientização; manutenção das estruturas físicas e operacionais da ONG.<br><br>
+          <strong>3. Transparência:</strong> A ONG compromete-se a manter transparência na aplicação dos recursos, disponibilizando relatórios e informações sempre que solicitado.<br><br>
+          <strong>4. Privacidade:</strong> Os dados do(a) doador(a) serão utilizados apenas para fins administrativos e de comunicação da ONG, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).<br><br>
+          <strong>5. Cancelamento:</strong> O(a) doador(a) poderá interromper suas doações a qualquer momento, mediante comunicação por escrito ou pelos canais oficiais da ONG.<br><br>
+          <strong>6. Declaração:</strong> Ao aceitar eletronicamente este termo, o(a) doador(a) declara estar ciente e de acordo com todas as condições aqui estabelecidas. Este aceite eletrônico tem validade jurídica como manifestação de vontade e registro de consentimento para os fins descritos.
+        </p>
+      </details>
+
+      <button type="submit">Aceitar os Termos e Finalizar Cadastro</button>
+
+        </fieldset>
+        
+ 
+</form>
+
+<script>
+  document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // impede o envio imediato
+    alert("Cadastro realizado com sucesso! Obrigado por se tornar um doador ❤️");
+  });
+  
+</script>
+</body>
+</html>
