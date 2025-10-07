@@ -19,16 +19,46 @@
             color: #333;
         }
 
+        /* ======== CABEÇALHO ======== */
         header {
-            background-color: #1e21f1;
+            background-color: #1e21f1; /* Azul original */
             color: white;
             padding: 20px 0;
             text-align: center;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Cores do título */
+        header h1 .ong {
+            color: #ffffff; /* Branco */
+            text-shadow: 2px 2px 5px rgba(255,255,255,0.3);
+        }
+
+        header h1 .tio-patinhas {
+            color: #ffcc00; /* Amarelo dourado */
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            position: relative;
+            animation: brilhoDourado 3s infinite ease-in-out;
+        }
+
+        /* Animação do brilho */
+        @keyframes brilhoDourado {
+            0%, 100% {
+                text-shadow: 
+                    0 0 10px rgba(255, 230, 120, 0.4),
+                    0 0 20px rgba(255, 230, 120, 0.2);
+            }
+            50% {
+                text-shadow: 
+                    0 0 20px rgba(255, 255, 180, 0.8),
+                    0 0 35px rgba(255, 230, 120, 0.6);
+            }
         }
 
         nav ul {
@@ -92,12 +122,16 @@
                 flex-direction: column;
                 gap: 10px;
             }
+
+            header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>ONG Tio Patinhas</h1>
+        <h1><span class="ong">ONG</span> <span class="tio-patinhas">Tio Patinhas</span></h1>
         <nav>  
             <ul>
                  <li><a href="index.html">Início</a></li>
@@ -121,7 +155,6 @@
             <p>Resgatar, proteger e cuidar de animais abandonados, promovendo seu bem-estar, incentivando a adoção responsável e conscientizando a sociedade sobre a importância do respeito e da proteção aos animais.</p>
             <img src="rua.jpg" alt="Imagem de animais" width="400" height="300"> 
             <img src="rua2.jpg" alt="Imagem de animais2" width="400" height="300">
-            
         </section>
 
         <section> 
