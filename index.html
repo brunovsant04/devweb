@@ -4,50 +4,138 @@
     <meta charset="UTF-8">
     <title>ONG Tio Patinhas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e21f1;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #757dec;
+            margin-bottom: 15px;
+        }
+
+        section img {
+            display: block;
+            margin: 15px 0;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        address p {
+            margin-bottom: 5px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <title>Cadastro de Usuário</title>
-</head>
-</body>
     <header>
-        <h1>Usuário</h1>
+        <h1>ONG Tio Patinhas</h1>
         <nav>  
             <ul>
-                 <li><a href="index.html">Inicio</a></li>
+                 <li><a href="index.html">Início</a></li>
                  <li><a href="Projetos.html">Projetos</a></li>
                  <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section>
+            <img src="imagem1.jpeg" alt="Imagem" width="300" height="300">
             <h2>Quem somos</h2>
             <p>Somos uma organização sem fins lucrativos que atua com animais abandonados.</p>
-            <img src="imagem1.jpeg" alt="Imagem de organizacao" width="300">
             <p>Nossa missão é resgatar, cuidar e promover a adoção responsável para esses animais.</p>
             <p>Junte-se a nós nessa causa nobre!</p>
         </section>
 
         <section>
-            <h2> Missão da ONG Tio Patinhas</h2>
-            <p>A ONG Tio Patinhas tem como missão resgatar, cuidar e promover a adoção responsável de animais abandonados, promovendo o bem-estar animal e a conscientização sobre a importância da adoção responsável.</p>
-            <img src="imagem2.jpeg" alt="Imagem de animais" width="300">
+            <h2>Missão da ONG Tio Patinhas</h2>
+            <p>Resgatar, proteger e cuidar de animais abandonados, promovendo seu bem-estar, incentivando a adoção responsável e conscientizando a sociedade sobre a importância do respeito e da proteção aos animais.</p>
+            <img src="rua.jpg" alt="Imagem de animais" width="400" height="300"> 
+            <img src="rua2.jpg" alt="Imagem de animais2" width="400" height="300">
+            
         </section>
 
         <section> 
             <h2>Contato ONG Tio Patinhas</h2>
             <address>
-                <p>Endereço: Rua Simão Alves, 54, Centro, Afogados da Ingazeira - PE </p>
-                <p>Telefone: (87)9 9158-4710</p>
-                <p>Email: contato@ongtiopatinhas.org.br</p>
+                <p><strong>Endereço:</strong> Rua Simão Alves, 54, Centro, Afogados da Ingazeira - PE </p>
+                <p><strong>Telefone:</strong> (87) 9 9158-4710</p>
+                <p><strong>Email:</strong> contato@ongtiopatinhas.org.br</p>
             </address>
-
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 ONG Tio Patinhas</p>
     </footer>
-    
 </body>
 </html>
