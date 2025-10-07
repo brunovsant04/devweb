@@ -1,4 +1,4 @@
-    <style>
+
         /* Reset básico */
         * {
             margin: 0;
@@ -102,7 +102,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
+            background-color: #091be3;
             color: white;
         }
 
@@ -121,4 +121,20 @@
                 font-size: 2rem;
             }
         }
-    </style>
+
+ 
+    #player-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0b25ecea;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 2px 6px rgba(8, 50, 238, 0.2);
+      z-index: 1000;
+    }
+
+    audio {
+      width: 150px;
+    }

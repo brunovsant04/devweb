@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nossos Projetos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #100de8;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .carousel-container {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      background: rgba(0,0,0,0.4);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+    }
+
+    .btn:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    #prevBtn {
+      left: 10px;
+    }
+
+    #nextBtn {
+      right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .btn {
+        font-size: 30px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nossas Ações de Resgate</h1>
+</header>
+
+<div class="carousel-container">
+  <button class="btn" id="prevBtn">&#10094;</button>
+  <button class="btn" id="nextBtn">&#10095;</button>
+
+  <div class="carousel-slide" id="carouselSlide">
+    <!-- 👇 Substitua essas imagens pelos seus arquivos locais -->
+    <img src="1.jpeg" alt="Projeto 1">
+    <img src="2.jpg" alt="Projeto 2">
+    <img src="3.jpeg" alt="Projeto 3">
+    <img src="4.jpg" alt="Projeto 4">
+    <img src="5.jpeg" alt="Projeto 4">
+    <img src="6.jpg" alt="Projeto 4">
+
+
+    
+  </div>
+</div>
+
+<script>
+  const carouselSlide = document.getElementById('carouselSlide');
+  const images = carouselSlide.querySelectorAll('img');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let counter = 0;
+
+  function updateCarousel() {
+    const size = images[0].clientWidth;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  }
+
+  function showNextImage() {
+    counter = (counter + 1) % images.length;
+    updateCarousel();
+  }
+
+  function showPrevImage() {
+    counter = (counter - 1 + images.length) % images.length;
+    updateCarousel();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    showNextImage();
+    resetAutoplay();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    showPrevImage();
+    resetAutoplay();
+  });
+
+  window.addEventListener('resize', updateCarousel);
+
+  let autoplayInterval = setInterval(showNextImage, 3000);
+
+  function resetAutoplay() {
+    clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(showNextImage, 3000);
+  }
+
+  updateCarousel();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Player Flutuante</title>
+  <style>
+    #player-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffffffcc;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    audio {
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Player de música flutuante -->
+  <div id="player-flutuante">
+    <audio controls autoplay loop>
+      <source src="musica.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+  </div>
+
+</body>
+</html>
